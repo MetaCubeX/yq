@@ -69,9 +69,9 @@ func (o *CandidateNode) UnmarshalGoccyYAML(node ast.Node, cm yaml.CommentMap, an
 		o.Kind = ScalarNode
 		o.Tag = "!!null"
 		o.Value = node.GetToken().Value
-		if node.GetToken().Type == goccyToken.ImplicitNullType {
-			o.Value = ""
-		}
+		//if node.GetToken().Type == goccyToken.NullType {
+		//	o.Value = ""
+		//}
 	case ast.StringType:
 		o.Kind = ScalarNode
 		o.Tag = "!!str"

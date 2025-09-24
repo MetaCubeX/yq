@@ -3,8 +3,9 @@ package yqlib
 import (
 	"fmt"
 	"path/filepath"
-	"slices"
 	"strings"
+
+	"golang.org/x/exp/slices"
 )
 
 type EncoderFactoryFunction func() Encoder

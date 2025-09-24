@@ -3,7 +3,8 @@ package yqlib
 import (
 	"container/list"
 	"fmt"
-	"slices"
+
+	"golang.org/x/exp/slices"
 
 	"github.com/elliotchance/orderedmap"
 )
@@ -333,10 +334,10 @@ func traverseMergeAnchor(newMatches *orderedmap.OrderedMap, merge *CandidateNode
 	case MappingNode:
 		return doTraverseMap(newMatches, merge, wantedKey, prefs, splat)
 	case SequenceNode:
-		content := slices.All(merge.Content)
+		content := slices.Clone(merge.Content)
 		if ConfiguredYamlPreferences.FixMergeAnchorToSpec {
 			// Reverse to make earlier values take precedence, following spec
-			content = slices.Backward(merge.Content)
+			slices.Reverse(merge.Content)
 		}
 		for _, childValue := range content {
 			if childValue.Kind == AliasNode {

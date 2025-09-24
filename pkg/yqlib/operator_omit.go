@@ -6,7 +6,7 @@ import (
 )
 
 func omitMap(original *CandidateNode, indices *CandidateNode) *CandidateNode {
-	filteredContent := make([]*CandidateNode, 0, max(0, len(original.Content)-len(indices.Content)*2))
+	filteredContent := make([]*CandidateNode, 0)
 
 	for index := 0; index < len(original.Content); index += 2 {
 		pos := findInArray(indices, original.Content[index])
@@ -22,7 +22,7 @@ func omitMap(original *CandidateNode, indices *CandidateNode) *CandidateNode {
 }
 
 func omitSequence(original *CandidateNode, indices *CandidateNode) *CandidateNode {
-	filteredContent := make([]*CandidateNode, 0, max(0, len(original.Content)-len(indices.Content)))
+	filteredContent := make([]*CandidateNode, 0)
 
 	for index := 0; index < len(original.Content); index++ {
 		pos := findInArray(indices, createScalarNode(index, strconv.Itoa(index)))
