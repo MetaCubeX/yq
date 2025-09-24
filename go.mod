@@ -6,7 +6,6 @@ require (
 	github.com/alecthomas/repr v0.4.0
 	github.com/dimchansky/utfbom v1.1.1
 	github.com/elliotchance/orderedmap v1.8.0
-	github.com/fatih/color v1.18.0
 	github.com/go-ini/ini v1.67.0
 	github.com/goccy/go-json v0.10.5
 	github.com/jinzhu/copier v0.4.0
@@ -23,11 +22,6 @@ require (
 	gopkg.in/op/go-logging.v1 v1.0.0-20160211212156-b2cb9fa56473
 )
 
-require (
-	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
-	github.com/mattn/go-isatty v0.0.20 // indirect
-	golang.org/x/sys v0.30.0 // indirect
-)
+require github.com/inconshreveable/mousetrap v1.1.0 // indirect
 
 go 1.20

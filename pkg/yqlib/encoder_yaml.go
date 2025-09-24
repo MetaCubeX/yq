@@ -7,7 +7,6 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/fatih/color"
 	"go.yaml.in/yaml/v3"
 )
 
@@ -55,7 +54,7 @@ func (ye *yamlEncoder) PrintLeadingContent(writer io.Writer, content string) err
 				readline = "# " + readline
 			}
 			if ye.prefs.ColorsEnabled && strings.TrimSpace(readline) != "" {
-				readline = format(color.FgHiBlack) + readline + format(color.Reset)
+				readline = format(FgHiBlack) + readline + format(Reset)
 			}
 			if err := writeString(writer, readline); err != nil {
 				return err
