@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"github.com/mikefarah/yq/v4/pkg/yqlib"
+	"github.com/metacubex/yq/pkg/yqlib"
 )
 
 // only test format detection based on filename extension

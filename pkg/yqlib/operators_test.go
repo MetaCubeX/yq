@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 	logging "gopkg.in/op/go-logging.v1"
 )
 

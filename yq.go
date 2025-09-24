@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	command "github.com/mikefarah/yq/v4/cmd"
+	command "github.com/metacubex/yq/cmd"
 )
 
 func main() {

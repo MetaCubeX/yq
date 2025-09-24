@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 const complexExpectYaml = `a: Easy! as one two three

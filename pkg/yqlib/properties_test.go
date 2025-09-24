@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 const propertiesWithCommentsOnMap = `this.thing = hi hi

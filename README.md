@@ -232,7 +232,7 @@ See https://mikefarah.gitbook.io/yq/usage/github-action for more.
 
 ### Go Install:
 ```
-go install github.com/mikefarah/yq/v4@latest
+go install github.com/metacubex/yq@latest
 ```
 
 ## Community Supported Installation methods

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 const csvSimple = `name,numberOfCats,likesApples,height

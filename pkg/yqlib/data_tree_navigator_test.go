@@ -4,7 +4,7 @@ import (
 	"container/list"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 func TestGetMatchingNodes_NilExpressionNode(t *testing.T) {

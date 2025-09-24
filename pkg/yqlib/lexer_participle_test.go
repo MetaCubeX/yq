@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/alecthomas/repr"
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 type participleLexerScenario struct {

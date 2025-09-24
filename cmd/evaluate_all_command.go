@@ -3,7 +3,7 @@ package cmd
 import (
 	"errors"
 
-	"github.com/mikefarah/yq/v4/pkg/yqlib"
+	"github.com/metacubex/yq/pkg/yqlib"
 	"github.com/spf13/cobra"
 )
 

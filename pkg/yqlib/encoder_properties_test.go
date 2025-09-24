@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 type keyValuePair struct {

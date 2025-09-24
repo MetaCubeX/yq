@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 func yamlToJSON(t *testing.T, sampleYaml string, indent int) string {

@@ -3,7 +3,7 @@ package yqlib
 import (
 	"testing"
 
-	"github.com/mikefarah/yq/v4/test"
+	"github.com/metacubex/yq/test"
 )
 
 func TestStringEvaluator_MultipleDocumentMerge(t *testing.T) {
