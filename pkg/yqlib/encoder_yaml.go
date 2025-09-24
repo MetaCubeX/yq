@@ -2,7 +2,6 @@ package yqlib
 
 import (
 	"bufio"
-	"bytes"
 	"errors"
 	"io"
 	"regexp"
@@ -88,10 +87,6 @@ func (ye *yamlEncoder) Encode(writer io.Writer, node *CandidateNode) error {
 	}
 
 	destination := writer
-	tempBuffer := bytes.NewBuffer(nil)
-	if ye.prefs.ColorsEnabled {
-		destination = tempBuffer
-	}
 
 	var encoder = yaml.NewEncoder(destination)
 
@@ -114,8 +109,5 @@ func (ye *yamlEncoder) Encode(writer io.Writer, node *CandidateNode) error {
 		return err
 	}
 
-	if ye.prefs.ColorsEnabled {
-		return colorizeAndPrint(tempBuffer.Bytes(), writer)
-	}
 	return nil
 }

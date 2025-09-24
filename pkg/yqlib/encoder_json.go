@@ -3,7 +3,6 @@
 package yqlib
 
 import (
-	"bytes"
 	"io"
 
 	"github.com/goccy/go-json"
@@ -45,10 +44,6 @@ func (je *jsonEncoder) Encode(writer io.Writer, node *CandidateNode) error {
 	}
 
 	destination := writer
-	tempBuffer := bytes.NewBuffer(nil)
-	if je.prefs.ColorsEnabled {
-		destination = tempBuffer
-	}
 
 	var encoder = json.NewEncoder(destination)
 	encoder.SetEscapeHTML(false) // do not escape html chars e.g. &, <, >
@@ -57,9 +52,6 @@ func (je *jsonEncoder) Encode(writer io.Writer, node *CandidateNode) error {
 	err := encoder.Encode(node)
 	if err != nil {
 		return err
-	}
-	if je.prefs.ColorsEnabled {
-		return colorizeAndPrint(tempBuffer.Bytes(), writer)
 	}
 	return nil
 }

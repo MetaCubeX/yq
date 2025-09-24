@@ -33,8 +33,6 @@ type expressionScenario struct {
 	skipForGoccy          bool
 }
 
-var goccyTesting = false
-
 var testingDecoder = NewYamlDecoder(ConfiguredYamlPreferences)
 
 func TestMain(m *testing.M) {
@@ -44,12 +42,6 @@ func TestMain(m *testing.M) {
 	}
 	ConfiguredYamlPreferences.ColorsEnabled = false
 	ConfiguredJSONPreferences.ColorsEnabled = false
-
-	goccyTesting = os.Getenv("GOCCY") == "true"
-
-	if goccyTesting {
-		testingDecoder = NewGoccyYAMLDecoder()
-	}
 
 	Now = func() time.Time {
 		return time.Date(2021, time.May, 19, 1, 2, 3, 4, time.UTC)
