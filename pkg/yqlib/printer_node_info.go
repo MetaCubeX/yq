@@ -5,7 +5,7 @@ import (
 	"container/list"
 	"io"
 
-	"go.yaml.in/yaml/v3"
+	"gopkg.in/yaml.v3"
 )
 
 type nodeInfoPrinter struct {
